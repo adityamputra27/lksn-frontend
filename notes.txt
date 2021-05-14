@@ -1,0 +1,5 @@
+https://github.com/vuejs/vue-cli/blob/dev/docs/README.md
+https://router.vuejs.org/en/essentials/getting-started.html
+https://www.npmjs.com/package/vue-axios
+https://github.com/mic8/vue-php-server
+https://router.vuejs.org/en/

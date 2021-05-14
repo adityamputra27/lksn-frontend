@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:8000/movie/1/edit -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema XIX Scheduling</title>
+  <link href="./update_movie_files/style.css" rel="stylesheet">
+</head>
+<body style="">
+<div>
+  <div class="top-bar">
+          <a href="http://localhost:8000/branch">Branch</a>
+      <a href="http://localhost:8000/studio">Studio</a>
+      <a href="http://localhost:8000/movie">Movie</a>
+      <a href="http://localhost:8000/schedule">Schedule</a>
+      <a href="http://localhost:8000/logout">Logout</a>
+      </div>
+  <div class="l-wrap">
+    <div class="l-sidebar-article"></div>
+    <div class="l-main-article">
+        <form action="http://localhost:8000/movie/1" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">    <input type="hidden" name="_method" value="put">    <div class="group">
+      <input id="name" type="text" name="name" value="Movie 1" required="">
+      <label for="name">Name</label>
+      <div class="bar"></div>
+          </div>
+    <div class="group">
+      <input id="minute_length" type="text" name="minute_length" value="100" required="">
+      <label for="minute_length">Minute Length</label>
+      <div class="bar"></div>
+          </div>
+    <div>
+      <input id="minute_length" type="file" name="picture" required="">
+          </div>
+    <button>Update</button>
+  </form>
+    </div>
+  </div>
+</div>
+
+
+</body></html>

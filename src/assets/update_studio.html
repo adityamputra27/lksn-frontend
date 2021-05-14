@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8000/studio/1/edit -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema XIX Scheduling</title>
+  <link href="./update_studio_files/style.css" rel="stylesheet">
+</head>
+<body style="">
+<div>
+  <div class="top-bar">
+          <a href="http://localhost:8000/branch">Branch</a>
+      <a href="http://localhost:8000/studio">Studio</a>
+      <a href="http://localhost:8000/movie">Movie</a>
+      <a href="http://localhost:8000/schedule">Schedule</a>
+      <a href="http://localhost:8000/logout">Logout</a>
+      </div>
+  <div class="l-wrap">
+    <div class="l-sidebar-article"></div>
+    <div class="l-main-article">
+        <form action="http://localhost:8000/studio/1" method="POST">
+    <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">    <input type="hidden" name="_method" value="put">    <div class="group">
+      <span>Branch</span>
+      <select name="branch_id">
+        <option value="">--select branch--</option>
+                  <option value="1" selected="">Bekasi</option>
+                  <option value="2">Palembang</option>
+                  <option value="3">Probolinggo</option>
+              </select>
+      <span class="invalid-feedback">
+          <strong></strong>
+      </span>
+    </div>
+    <div class="group">
+      <input id="name" type="text" name="name" value="Studio 61" required="">
+      <label for="name">Name</label>
+      <div class="bar"></div>
+          </div>
+
+
+    <div class="group">
+      <input id="basic_price" type="text" name="basic_price" value="10000.00">
+      <label for="basic_price">Basic Price</label>
+      <div class="bar"></div>
+          </div>
+
+    <div class="group">
+      <input id="additional_friday_price" type="text" name="additional_friday_price" value="30000.00">
+      <label for="additional_friday_price">Additional Friday Price</label>
+      <div class="bar"></div>
+          </div>
+
+    <div class="group">
+      <input id="additional_saturday_price" type="text" name="additional_saturday_price" value="30000.00">
+      <label for="additional_saturday_price">Additional Saturday Price</label>
+      <div class="bar"></div>
+          </div>
+
+    <div class="group">
+      <input id="additional_sunday_price" type="text" name="additional_sunday_price" value="90000.00">
+      <label for="additional_sunday_price">Additional Sunday Price</label>
+      <div class="bar"></div>
+          </div>
+    <button>Update</button>
+  </form>
+    </div>
+  </div>
+</div>
+
+
+</body></html>

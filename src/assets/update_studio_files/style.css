@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px black solid;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.l-sidebar-article:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+@media (min-width: 700px) {
+    .l-sidebar-article .grid-item {
+        padding-left: 12px;
+        padding-right: 12px;
+        float: left;
+    }
+}
+
+.l-sidebar-article .l-main {
+    margin-top: 20px;
+}
+
+@media (min-width: 700px) {
+    .l-sidebar-article .l-main {
+        width: 66.6666666667%;
+        margin-top: 0;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .l-sidebar-article .l-main {
+        width: 58.3333333333%;
+    }
+}
+
+.grid-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.column {
+    width: calc((100% - 24px * 12) / 12);
+    margin-right: 12px;
+    margin-left: 12px;
+    float: left;
+    height: 80px;
+}
+
+.group {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 30px;
+    color: #d1d1d1;
+    cursor: text;
+    transition: .25s ease;
+}
+
+input[type=text],
+input[type=password] {
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-size: 36px;
+    transition: .3s ease;
+}
+
+input[type=text]:valid ~ label,
+input[type=password]:valid ~ label {
+    top: 0;
+    color: rgba(24, 24, 23, 0.87);
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    outline: none;
+}
+
+input[type=text]:focus ~ label,
+input[type=password]:focus ~ label {
+    top: 0;
+    color: rgba(24, 24, 23, 0.87);
+}
+
+input[type=text]:focus ~ .bar:before,
+input[type=password]:focus ~ .bar:before {
+    transform: translateX(0);
+}
+
+input[type=text]:-webkit-autofill,
+input[type=password]:-webkit-autofill {
+    /*-webkit-box-shadow: 0 0 0px 1000px #333 inset;*/
+    /*-webkit-text-fill-color: black !important;*/
+}
+
+.bar {
+    content: '';
+    width: 550px;
+    height: 3px;
+    transition: .3s ease;
+    position: relative;
+    background: #448AFF;
+}
+
+.bar:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    background: #3F51B5;
+    transform: translateX(-100%);
+}
+
+::selection {
+    background: #aab4b9;
+}
+
+button, .button {
+    background: #3F51B5;
+    border: none;
+    color: white !important;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.5em;
+}
+
+.invalid-feedback {
+    color: #ec151f;
+    display: block;
+    margin-top: 2px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #303F9F;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #303F9F;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #303F9F;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.message {
+    position: fixed;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.message.success {
+    background: #00C853;
+}
+
+.message.error {
+    background: #f73c3a;
+}
+
+.group select, .group input[type=datetime-local], .group input[type=date] {
+    font-size: 1.5em;
+    margin-left: 15px;
+}

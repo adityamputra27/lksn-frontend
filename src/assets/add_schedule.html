@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:8000/schedule/create -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema XIX Scheduling</title>
+  <link href="./add_schedule_files/style.css" rel="stylesheet">
+</head>
+<body style="">
+<div>
+  <div class="top-bar">
+          <a href="http://localhost:8000/branch">Branch</a>
+      <a href="http://localhost:8000/studio">Studio</a>
+      <a href="http://localhost:8000/movie">Movie</a>
+      <a href="http://localhost:8000/schedule">Schedule</a>
+      <a href="http://localhost:8000/logout">Logout</a>
+      </div>
+  <div class="l-wrap">
+    <div class="l-sidebar-article"></div>
+    <div class="l-main-article">
+        <form action="http://localhost:8000/schedule" method="POST">
+    <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">    <div class="group">
+      <span>Studio</span>
+      <select name="studio_id">
+        <option value="" selected="">--select studio--</option>
+                  <option value="1">Studio 61 (Branch: Bekasi)</option>
+                  <option value="2">Studio 89 (Branch: Bekasi)</option>
+                  <option value="3">Studio 43 (Branch: Palembang)</option>
+                  <option value="4">Studio 73 (Branch: Probolinggo)</option>
+                  <option value="5">Studio 28 (Branch: Probolinggo)</option>
+              </select>
+      <span class="invalid-feedback">
+          <strong></strong>
+      </span>
+    </div>
+
+    <div class="group">
+      <span>Movie</span>
+      <select name="movie_id">
+        <option value="" selected="">--select movie--</option>
+                  <option value="1">Movie 1</option>
+                  <option value="2">Movie 2</option>
+                  <option value="3">Movie 3</option>
+              </select>
+      <span class="invalid-feedback">
+          <strong></strong>
+      </span>
+    </div>
+
+    <div class="group">
+      <span>Start Time</span>
+      <input id="start" type="datetime-local" name="start" value="">
+          </div>
+
+    <button>Add</button>
+  </form>
+    </div>
+  </div>
+</div>
+
+
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:8000/movie -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema XIX Scheduling</title>
+  <link href="./view_movie_files/style.css" rel="stylesheet">
+</head>
+<body style="">
+<div>
+  <div class="top-bar">
+          <a href="http://localhost:8000/branch">Branch</a>
+      <a href="http://localhost:8000/studio">Studio</a>
+      <a href="http://localhost:8000/movie">Movie</a>
+      <a href="http://localhost:8000/schedule">Schedule</a>
+      <a href="http://localhost:8000/logout">Logout</a>
+      </div>
+  <div class="l-wrap">
+    <div class="l-sidebar-article"></div>
+    <div class="l-main-article">
+        <a href="http://localhost:8000/movie/create" class="button">
+    Add New Movie
+  </a>
+
+  <table>
+    <tbody><tr>
+      <th>Picture</th>
+      <th>Movie Name</th>
+      <th>Minute Length</th>
+      <th>Action</th>
+    </tr>
+          <tr>
+        <td><img src="./view_movie_files/movie"></td>
+        <td>Movie 1</td>
+        <td>100</td>
+        <td>
+          <a href="http://localhost:8000/movie/1/edit" class="button">Update</a>
+          <form action="http://localhost:8000/movie/1" method="post" style="display: inline">
+            <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">            <input type="hidden" name="_method" value="delete">            <button>Delete</button>
+          </form>
+        </td>
+      </tr>
+          <tr>
+        <td><img src="./view_movie_files/movie"></td>
+        <td>Movie 2</td>
+        <td>120</td>
+        <td>
+          <a href="http://localhost:8000/movie/2/edit" class="button">Update</a>
+          <form action="http://localhost:8000/movie/2" method="post" style="display: inline">
+            <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">            <input type="hidden" name="_method" value="delete">            <button>Delete</button>
+          </form>
+        </td>
+      </tr>
+          <tr>
+        <td><img src="./view_movie_files/movie"></td>
+        <td>Movie 3</td>
+        <td>90</td>
+        <td>
+          <a href="http://localhost:8000/movie/3/edit" class="button">Update</a>
+          <form action="http://localhost:8000/movie/3" method="post" style="display: inline">
+            <input type="hidden" name="_token" value="DW0JUfuP9BITbJ3Q1RJZKAnqOrwziBBJ5Q8Fc2P5">            <input type="hidden" name="_method" value="delete">            <button>Delete</button>
+          </form>
+        </td>
+      </tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+
+</body></html>

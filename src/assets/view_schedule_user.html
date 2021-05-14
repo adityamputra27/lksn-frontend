@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8000/view-schedule -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema XIX Scheduling</title>
+  <link href="./view_schedule_user_files/style.css" rel="stylesheet">
+</head>
+<body style="">
+<div>
+  <div class="top-bar">
+          Welcome to Cinema XIX
+      <a href="http://localhost:8000/logout">Logout</a>
+      </div>
+  <div class="l-wrap">
+    <div class="l-sidebar-article"></div>
+    <div class="l-main-article">
+        <form action="http://localhost:8000/view-schedule" method="POST">
+    <input type="hidden" name="_token" value="D4xFwUjUtW6WinRchGNMxiYOtHwMmGCGPmMwDaFi">    <div class="group">
+      <select name="branch_id">
+                  <option value="1" selected="">Bekasi</option>
+                  <option value="2">Palembang</option>
+                  <option value="3">Probolinggo</option>
+              </select>
+      <input type="date" name="date" value="2018-04-19">
+      <button>Search Schedule</button>
+    </div>
+  </form>
+
+  <table>
+    <tbody><tr>
+      <th>Movie</th>
+      <th>Price</th>
+      <th>Start Time</th>
+    </tr>
+                  <tr>
+          <td>Movie 1</td>
+          <td>10000.00</td>
+          <td>
+                          <span style="padding-left:5px;padding-right:5px">15:03</span>
+                      </td>
+        </tr>
+              <tr>
+          <td>Movie 1</td>
+          <td>90000.00</td>
+          <td>
+                          <span style="padding-left:5px;padding-right:5px">14:02</span>
+                          <span style="padding-left:5px;padding-right:5px">06:06</span>
+                      </td>
+        </tr>
+                        <tr>
+          <td>Movie 3</td>
+          <td>10000.00</td>
+          <td>
+                          <span style="padding-left:5px;padding-right:5px">17:05</span>
+                          <span style="padding-left:5px;padding-right:5px">06:14</span>
+                      </td>
+        </tr>
+            </tbody></table>
+    </div>
+  </div>
+</div>
+
+
+</body></html>
