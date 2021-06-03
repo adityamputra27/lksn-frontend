@@ -1,18 +1,18 @@
 <template>
     <div>
-        <div class="top-bar" v-if="user != null && user.role == 'admin' && isLoggedIn">
+        <div class="top-bar" v-if="user != null && user.role == 'admin'">
             <router-link to="/branch">Branch</router-link>
             <router-link to="/studio">Studio</router-link>
             <router-link to="/movie">Movie</router-link>
             <router-link to="/schedule">Schedule</router-link>
             <a href="" @click.prevent="logout">Logout</a>
         </div>
-        <div class="top-bar" v-if="user != null && user.role == 'user' && isLoggedIn">
+        <div class="top-bar" v-if="user != null && user.role == 'user'">
             Welcome To Cinema XIX
-            <router-link to="/view-schedule">Schedule</router-link>
-            <!-- <a href="#" @click="logout">Logout</a> -->
+            <router-link :to="{name: 'View Schedule'}">Schedule</router-link>
+            <a href="" @click.prevent="logout">Logout</a>
         </div>
-        <h2 v-if="isLoggedIn && user != null" style="margin-left: 4.5em;">Welcome, {{ user.username }}. Your Role is {{ user.role }}</h2>
+        <h2 v-if="user != null" style="margin-left: 4.5em;">Welcome, {{ user.username }}. Your Role is {{ user.role }}</h2>
         <router-view/>
     </div>
 </template>
@@ -34,16 +34,16 @@
                 isLoggedIn: false
             }
         },
-        created() {
+        mounted() {
             this.getUser()
-            
         },
         methods: {
             getUser() {
                 let user = JSON.parse(localStorage.getItem('user'))
+                
                 this.user = user
-                this.isLoggedIn = true
-                // console.log(this.user)
+                // this.isLoggedIn = true
+                console.log(this.user)
             },
             logout() {
                 this.$axios.get(baseURL+'auth/logout?token='+this.user.token)

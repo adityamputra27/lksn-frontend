@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="l-wrap">
+        <div class="l-wrap" v-if="!isUpdating">
             <div class="l-sidebar-article"></div>
             <div class="l-main-article">
                 <router-link to="/schedule/create" class="button">Add New Schedule</router-link>
@@ -24,15 +24,15 @@
                             <td>{{ schedule.end }}</td>
                             <td>{{ schedule.price }}</td>
                             <td>
-                                <a class="button" v-on:click.prevent="updateSchedule(b)">Update</a>
-                                <button v-on:click.prevent="deleteSchedule(b.id)">Delete</button>
+                                <a class="button" v-on:click.prevent="updateSchedule(schedule)">Update</a>
+                                <button v-on:click.prevent="deleteSchedule(schedule.id)">Delete</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <EditSchedule v-if="isUpdating" v-bind:schedule="ub" v-on:finishUpdate="finishUpdate"></EditSchedule>
+        <AdminEditSchedule v-if="isUpdating" v-bind:schedule="ub" v-on:finishUpdate="finishUpdate"></AdminEditSchedule>
     </div>
 </template>
 
@@ -40,7 +40,7 @@
 
 const baseURL = 'http://localhost:8000/v1/'
 
-import EditSchedule from './EditSchedule'
+import AdminEditSchedule from './AdminEditSchedule'
 
 export default {
     data() {
@@ -62,9 +62,9 @@ export default {
                 this.schedules = response.data.data
             })
         },
-        updateSchedule(movie) {
+        updateSchedule(schedule) {
             this.isUpdating = true
-            this.ub = movie
+            this.ub = schedule
         },
         finishUpdate() {
             this.isUpdating = false
@@ -79,7 +79,7 @@ export default {
         }
     },
     components: {
-        EditSchedule
+        AdminEditSchedule
     }
 }
 </script>

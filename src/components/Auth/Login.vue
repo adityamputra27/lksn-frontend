@@ -72,7 +72,7 @@ export default {
 
                 alert(response.data.message)
 
-                this.$router.push('/')
+                this.$router.push({name: 'Home'})
             })
             .catch((error) => {
                 // console.log(error.response.status)

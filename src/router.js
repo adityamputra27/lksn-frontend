@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from './components/Auth/Login'
+import App from './App'
 import ViewBranch from './components/Branch/ViewBranch'
 import AddBranch from './components/Branch/AddBranch'
 import ViewMovie from './components/Movie/ViewMovie'
@@ -8,11 +9,20 @@ import AddMovie from './components/Movie/AddMovie'
 import ViewStudio from './components/Studio/ViewStudio'
 import AddStudio from './components/Studio/AddStudio'
 import AdminSchedule from './components/Schedule/AdminSchedule'
+import AdminAddSchedule from './components/Schedule/AdminAddSchedule'
 import UserSchedule from './components/Schedule/UserSchedule'
 
 Vue.use(VueRouter)
 
 const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: App,
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/login',
         name: 'Login',
@@ -52,6 +62,11 @@ const routes = [
         path: '/schedule',
         name: 'View Admin Schedule',
         component: AdminSchedule
+    },
+    {
+        path: '/schedule/create',
+        name: 'Add Admin Schedule',
+        component: AdminAddSchedule
     },
     {
         path: '/view-schedule',
